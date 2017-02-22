@@ -1,7 +1,16 @@
 FROM microsoft/dotnet
-CMD ["bash", "build.sh"]
+
+COPY . /app
 WORKDIR /app
-ENV ASPNETCORE_URLS http://*:7800
-COPY bin/release/netcoreapp1.0/publish/. .
+RUN ["dotnet", "restore"]
+RUN ["dotnet", "bundle"]
+RUN ["dotnet", "build"]
+
+RUN rm -rf /bin/release
+RUN dotnet publish -c release
+COPY /bin/release/netcoreapp1.0/publish/. .
+
+ENTRYPOINT ["dotnet", "/app/aariveros-reporting-web.dll"]
+
 EXPOSE 7800
-ENTRYPOINT ["dotnet", "aariveros-reporting-web.dll"]
+ENV ASPNETCORE_URLS http://*:7800

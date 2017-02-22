@@ -1,8 +1,4 @@
-using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
 
 namespace aariveros_reporting_web
@@ -13,7 +9,7 @@ namespace aariveros_reporting_web
         {
             var host = new WebHostBuilder()
                 .UseKestrel()
-                .UseUrls("http://*:7800")
+                .UseUrls("http://0.0.0.0:7800")
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseIISIntegration()
                 .UseStartup<Startup>()

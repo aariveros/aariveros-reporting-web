@@ -4,14 +4,31 @@
     <TargetFramework>netcoreapp1.0</TargetFramework>
   </PropertyGroup>
 
+  <Target Name="BeforeBuild">
+    <Exec Command="npm cache clean" />
+    <Exec Command="npm install" />
+    <Exec Command="node_modules\.bin\bower cache clean" />
+    <Exec Command="node_modules\.bin\bower install" />
+  </Target>
+
   <ItemGroup>
     <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Dockerfile">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore" Version="1.0.3" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="1.0.2" />
     <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="1.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="BundlerMinifier.Core" Version="2.3.327" />
   </ItemGroup>
 
 </Project>
