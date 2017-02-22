@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
 
-namespace aariveros_reports_web
+namespace aariveros_reporting_web
 {
     public class Program
     {
@@ -13,6 +13,7 @@ namespace aariveros_reports_web
         {
             var host = new WebHostBuilder()
                 .UseKestrel()
+                .UseUrls("http://*:7800")
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseIISIntegration()
                 .UseStartup<Startup>()
