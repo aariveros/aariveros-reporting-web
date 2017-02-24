@@ -4,15 +4,6 @@
     <TargetFramework>netcoreapp1.0</TargetFramework>
   </PropertyGroup>
 
-  <Target Name="BeforeBuild">
-    <Exec Command="npm cache clean" />
-    <Exec Command="npm install" />
-    <Exec Command="node_modules\.bin\bower cache clean" />
-    <Exec Command="node_modules\.bin\bower install" />
-    <Exec Command="node_modules\.bin\gulp clean" />
-    <Exec Command="node_modules\.bin\gulp min" />
-  </Target>
-
   <ItemGroup>
     <Folder Include="wwwroot\" />
   </ItemGroup>
@@ -28,9 +19,4 @@
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="1.0.2" />
     <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="1.0.1" />
   </ItemGroup>
-
-  <ItemGroup>
-    <DotNetCliToolReference Include="BundlerMinifier.Core" Version="2.3.327" />
-  </ItemGroup>
-
 </Project>
