@@ -1,0 +1,23 @@
+{
+  "name": "aariveros-reporting-web",
+  "homepage": "https://github.com/aariveros/aariveros-reporting-web",
+  "authors": [
+    "Andres Riveros <aariveros@resit.cl>"
+  ],
+  "description": "reporting demo",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "bootstrap": "^3.3.7",
+    "backbone": "^1.3.3",
+    "underscore": "^1.8.3"
+  }
+}

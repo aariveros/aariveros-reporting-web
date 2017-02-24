@@ -9,6 +9,8 @@
     <Exec Command="npm install" />
     <Exec Command="node_modules\.bin\bower cache clean" />
     <Exec Command="node_modules\.bin\bower install" />
+    <Exec Command="node_modules\.bin\gulp clean" />
+    <Exec Command="node_modules\.bin\gulp min" />
   </Target>
 
   <ItemGroup>
