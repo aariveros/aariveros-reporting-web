@@ -21,7 +21,7 @@ reporting.EnterpriseCollection = Backbone.Collection.extend({
 reporting.Project = Backbone.Model.extend({
 
     urlRoot: function () {
-        return reporting.urlApi + "/projects/";
+        return reporting.urlApi + "projects/";
     },
 
     idAttribute: 'projectId'
