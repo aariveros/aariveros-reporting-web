@@ -1,0 +1,18 @@
+<p><!--<img src="pics/<%= employeeId %>.jpg" width="160" height="160"/>--></p>
+<h3><%= firstName %> <%= surName %></h3>
+<br>
+<table class="table table-striped">
+    <% if (cellPhone) { %>
+    <tr>
+        <td>Cell Phone:</td>
+        <td><i class="icon-headphones"></i> <%= cellPhone %></td>
+    </tr>
+    <% } %>
+    <% if (mail) { %>
+    <tr>
+        <td>Email:</td>
+        <td><i class="icon-envelope"></i> <a href="mailto:<%= mail %>"><%= mail %></a></td>
+    </tr>
+    <% } %>
+
+</table>

@@ -1,0 +1,29 @@
+<p><!--<img src="pics/<%= projectId %>.jpg" width="160" height="160"/>--></p>
+<h3><%= name %></h3>
+<br>
+<table class="table table-striped">
+    <% if (officePhone) { %>
+    <tr>
+        <td>Office Phone:</td>
+        <td><i class="icon-home"></i> <%= officePhone %></td>
+    </tr>
+    <% } %>
+    <% if (cellPhone) { %>
+    <tr>
+        <td>Cell Phone:</td>
+        <td><i class="icon-headphones"></i> <%= cellPhone %></td>
+    </tr>
+    <% } %>
+    <% if (mail) { %>
+    <tr>
+        <td>Email:</td>
+        <td><i class="icon-envelope"></i> <a href="mailto:<%= mail %>"><%= mail %></a></td>
+    </tr>
+    <% } %>
+
+</table>
+
+<div class="alert alert-warning">
+    <h4 class="alert-heading">Warning</h4>
+    The chart data are fake.
+</div>

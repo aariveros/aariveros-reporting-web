@@ -1,0 +1,12 @@
+<td><!--<img width="50" height="50" src="pics/<%= enterpriseId %>_50.jpg" style="float:left;margin-right: 10px;"/>--></td>
+<td><a href='#enterprises/<%= enterpriseId %>'> <%= enterpriseId %></a></td>
+<td><a href='#enterprises/<%= enterpriseId %>'> <%= name %></a></td>
+<td>
+    <% if (managerId && employees) { %>
+    <% var manager = employees.find(x => x.employeeId === managerId) %>
+        <%= manager.firstName  %>  <%= manager.surName %>
+    <% } %>
+</td>
+<td><i class="icon-home"></i> <%= officePhone %></td>
+<td><i class="icon-headphones"></i> <%= cellPhone %></td>
+<td><i class="icon-envelope"></i> <a href="mailto:<%= mail %>"><%= mail %></a></td>
