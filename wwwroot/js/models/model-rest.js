@@ -1,7 +1,9 @@
+reporting.urlApi = "http://45.79.220.26:5000/";
+
 reporting.Enterprise = Backbone.Model.extend({
 
     urlRoot: function () {
-        return "http://localhost:5000/enterprises/";
+        return reporting.urlApi + "enterprises/";
     },
 
     idAttribute: 'enterpriseId'
@@ -12,14 +14,14 @@ reporting.EnterpriseCollection = Backbone.Collection.extend({
 
     model: reporting.Enterprise,
 
-    url:"http://localhost:5000/enterprises"
+    url: reporting.urlApi + "enterprises"
 
 });
 
 reporting.Project = Backbone.Model.extend({
 
     urlRoot: function () {
-        return "http://localhost:5000/projects/";
+        return reporting.urlApi + "/projects/";
     },
 
     idAttribute: 'projectId'
@@ -30,14 +32,14 @@ reporting.ProjectCollection = Backbone.Collection.extend({
 
     model: reporting.Project,
 
-    url:"http://localhost:5000/projects"
+    url:reporting.urlApi + "projects"
 
 });
 
 reporting.Employee = Backbone.Model.extend({
 
     urlRoot: function () {
-        return "http://localhost:5000/employees/";
+        return reporting.urlApi + "employees/";
     },
 
     idAttribute: 'employeeId'
@@ -48,6 +50,6 @@ reporting.EmployeeCollection = Backbone.Collection.extend({
 
     model: reporting.Employee,
 
-    url:"http://localhost:5000/employees"
+    url: reporting.urlApi + "employees"
 
 });
