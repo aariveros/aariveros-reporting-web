@@ -14,13 +14,6 @@ reporting.EnterpriseView = Backbone.View.extend({
         $('#projects', this.el).html(new reporting.EnterpriseProjectsView({model:projects}).render().el);
         $('#employees', this.el).html(new reporting.EnterpriseEmployeesView({model:employees}).render().el);
 
-        /*this.model.reports.fetch({
-            success:function (data) {
-                if (data.length == 0)
-                    $('.no-reports').show();
-            }
-        });
-        $('#reports', this.el).append(new reporting.EmployeeListView({model:this.model.reports}).render().el);*/
         return this;
     }
 });
