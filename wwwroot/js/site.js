@@ -7,7 +7,7 @@ var reporting = {
     loadTemplates: function(views, callback) {
 
         var deferreds = [];
-
+        
         $.each(views, function(index, view) {
             if (reporting[view]) {
                 deferreds.push($.get('tpl/' + view + '.html', function(data) {
@@ -27,8 +27,8 @@ reporting.Router = Backbone.Router.extend({
 
     routes: {
         "":                 "home",
-        "enterprises/:id":    "enterpriseDetails",
-        "projects/:id":    "projectDetails",
+        "enterprises/:id":  "enterpriseDetails",
+        "projects/:id":     "projectDetails",
         "employees/:id":    "employeeDetails"
     },
 
@@ -119,7 +119,12 @@ $(document).ready(function () {
             "EmployeeSummaryView", 
 
             "ReportEnterpriseProjectsEvolutionView",
-            "ReportEnterpriseTasksDistributionView"
+            "ReportEnterpriseTasksDistributionView",
+            "ReportEnterpriseTasksCompletedView", 
+
+            "ReportProjectEvolutionView",
+            "ReportProjectTasksView",
+            "ReportProjectConstraintsView"
         ],
         function () {
             reporting.router = new reporting.Router();

@@ -24,8 +24,8 @@ namespace aariveros_reporting_web
             {
                 app.UseDeveloperExceptionPage();
             }
-            app.UseDefaultFiles();
             app.UseStaticFiles();
+            
             app.UseMvcWithDefaultRoute();
         }
     }

@@ -8,6 +8,7 @@ reporting.EnterpriseSummaryView = Backbone.View.extend({
         this.$el.html(this.template(this.model.attributes));
         this.$el.append(new reporting.ReportEnterpriseProjectsEvolutionView().render().el);
         this.$el.append(new reporting.ReportEnterpriseTasksDistributionView().render().el);
+        this.$el.append(new reporting.ReportEnterpriseTasksCompletedView().render().el);
         return this;
     }
 
